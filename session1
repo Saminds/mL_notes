@@ -1,22 +1,89 @@
-Session 1: Introduction to Machine Learning
-Learning Problem Framework
-A learning problem is defined by three components:
-T (Task), P (Performance Measure), and E (Experience)
-→ Learning Problem = (T, P, E)
+# 🧠 Session 1: Introduction to Machine Learning
 
-Goal: Use experience to make better predictions on unseen data.
+## ✅ The Learning Problem
 
- Regression
-A regression problem is when we predict a continuous value from input features.
+A machine learning problem is defined by:
 
-Linear regression: fitting a straight line to the data.
+- **T**: Task  
+- **P**: Performance Measure  
+- **E**: Experience  
 
-Supervised Learning
-In supervised learning, the model learns from labeled data to predict output 
-𝑦
-y from input 
-𝑥
-x.
+This is often written as:  
+**Learning Problem = (T, P, E)**
 
+The goal is to use experience (data) to improve performance on a given task for unseen inputs.
 
+---
 
+## 📈 Regression and Supervised Learning
+
+- A **regression problem** is one where we predict a **continuous value** from features.  
+- **Linear regression** means we fit a line to our data.  
+
+**Supervised learning** includes:
+- **Regression algorithms**: predict continuous targets  
+- **Classification algorithms**: predict discrete class labels  
+
+Other learning paradigms:
+- **Semi-supervised learning**  
+- **Active learning**  
+- **Online learning**
+
+---
+
+## 🔍 Supervised Learning as Function Approximation
+
+In supervised learning, the model learns a function to predict output `y` given input `x`.
+
+The goal is to estimate a function:  
+
+f: ℝ^D → ℝ, such that y ≈ f(x) + ε
+
+Where:
+- `x`: input feature vector
+- `y`: target output
+- `ε`: random noise
+
+---
+
+## 📐 Hypothesis Space
+
+We define a **hypothesis set** as:
+H = { h(x, θ) | θ ∈ Θ }
+Where:
+- `h(x, θ)` is a candidate function
+- `θ` represents learnable parameters
+
+A **learning algorithm** selects the best hypothesis `h(x, θ*)` by finding:
+
+θ* = argmin J(θ)
+
+---
+
+## 🔢 Vector Representation
+
+- Input vector:  
+  `x = [x₀, x₁, ..., x_D]`
+
+- Parameter vector (weights):  
+  `θ = [θ₀, θ₁, ..., θ_D]`
+
+A **linear model** (hypothesis function) is defined as:  
+h_θ(x) = θ₀ + θ₁·x₁ + θ₂·x₂ + ... + θ_D·x_D
+or in vector form:  
+h_θ(x) = θᵀ·x
+
+---
+
+## 🎯 Cost Function & Optimization
+
+We define a **cost function** to measure prediction error.
+
+For a single data point:  
+SE = (yᵢ - h_θ(xᵢ))²
+
+For the whole dataset (Sum of Squared Errors):  
+J(θ) = Σ (yᵢ - θᵀ·xᵢ)²
+
+**Objective**: Find the best `θ` that minimizes the cost:  
+θ* = argmin J(θ)
