@@ -1,0 +1,22 @@
+Session 1: Introduction to Machine Learning
+Learning Problem Framework
+A learning problem is defined by three components:
+T (Task), P (Performance Measure), and E (Experience)
+→ Learning Problem = (T, P, E)
+
+Goal: Use experience to make better predictions on unseen data.
+
+ Regression
+A regression problem is when we predict a continuous value from input features.
+
+Linear regression: fitting a straight line to the data.
+
+Supervised Learning
+In supervised learning, the model learns from labeled data to predict output 
+𝑦
+y from input 
+𝑥
+x.
+
+
+
